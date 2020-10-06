@@ -6,7 +6,11 @@ extern Hazel::Application* Hazel::CreateApplication();
 
 int main()
 {
-    printf("Welcome to Hazel Engine!\n");
+	Hazel::Log::Init();
+
+	HZ_CORE_TRACE("Welcome to Hazel Engine! {0}", "Wang.ZhiNang");
+	HZ_INFO("Initilized!");
+
     auto app = Hazel::CreateApplication();
     app->Run();
     delete app;
